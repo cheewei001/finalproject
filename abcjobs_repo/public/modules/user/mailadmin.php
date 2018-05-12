@@ -54,7 +54,7 @@ if(isset($_POST["submitted"])){
         //$mail->Port = 25;
         $mail->From = "admin@gmail.com";
         $mail->FromName = "admin";
-        $mail->addAddress($row['email'], "cheewei");
+        $mail->addAddress($row['email'], $row['firstname']);
         $mail->isHTML(TRUE);
         $mail->Subject = "News Letter";
         $mail->Body = "<p>$mailcontent</p><br><br><a href=$link >Unsubscribe</a>";
